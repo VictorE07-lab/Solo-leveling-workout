@@ -2,23 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <title>Victor OS</title>
 <h2 class="sr-only">Victor OS Training v2</h2>
 <style>
+  input, textarea, button, select {
+  font-size: 16px;
+}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --bg:#07090f;--surface:#0e1220;--card:#111827;--border:#1e2a45;
   --blue:#4f8ef7;--purple:#8b5cf6;--green:#22c55e;--amber:#f59e0b;--red:#ef4444;
   --text:#c9d8f0;--muted:#4a607a;
 }
-html,body{min-height:100%;background:var(--bg);color:var(--text);
-  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',sans-serif;
-  -webkit-text-size-adjust:100%;overflow-x:hidden;font-size:16px}
-body{padding:12px;width:100%;max-width:680px;margin:0 auto;box-sizing:border-box}
-body::before{content:'';pointer-events:none;position:fixed;inset:0;
-  background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.06) 2px,rgba(0,0,0,.06) 4px);z-index:9999}
-.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+html, body {
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  font-size: 16px;
+
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+  touch-action: manipulation;
+}
+body {
+  padding: 12px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  padding-bottom: env(safe-area-inset-bottom);
+} 
 
 /* HEADER */
 .header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.2rem}
